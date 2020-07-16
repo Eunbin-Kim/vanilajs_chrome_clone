@@ -1,3 +1,14 @@
-const title = document.getElementById("title");
+const title = document.querySelector("#title");
 
-title.innerHTML = "Hi! From JSP";
+const CLICKED_CLASS = "clicked";
+
+function handleClick(){
+    title.classList.toggle(CLICKED_CLASS);
+}
+
+function init(){
+    title.addEventListener("click", handleClick)
+}
+init();
+
+
