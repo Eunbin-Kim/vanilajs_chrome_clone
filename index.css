@@ -1,5 +1,7 @@
-body{
-    background-color: #ecf0f1;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Source+Sans+Pro:wght@600&display=swap');
+
+html,body{
+    height: 100%;
 }
 
 .btn{
@@ -7,7 +9,24 @@ body{
 }
 
 body{
-    color: #34495e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+h4 {
+    margin : 0;
+}
+
+.js-clock {
+    font-size: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .clicked {
@@ -19,6 +38,31 @@ body{
     display:none;
 }
 
+.form, .greetings, .js-toDoList,
+.js-weather, .js-toDoForm{
+    font-family: 'Roboto', sans-serif;
+}
+
+
 .showing{
     display: block;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bgImage{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn .5s linear;
 }
